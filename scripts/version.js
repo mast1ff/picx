@@ -14,6 +14,9 @@ function updateVersion(packageName, directory, nextVersion) {
   if (Object.keys(json.dependencies).includes("picx")) {
     json.dependencies.picx = `^${nextVersion}`;
   }
+  if (Object.keys(json.devDependencies).includes("picx")) {
+    json.devDependencies.picx = `^${nextVersion}`;
+  }
   jsonfile.writeFileSync(file, json, { spaces: 2 });
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "picx",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A template engine that can be written in pure HTML",
   "author": "mast1ff <https://github.com/mast1ff>",
   "repository": {
