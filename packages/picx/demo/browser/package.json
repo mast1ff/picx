@@ -1,0 +1,12 @@
+{
+  "name": "@picx/browser-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "serve"
+  },
+  "dependencies": {
+    "picx": "*",
+    "serve": "^14.0.1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["src", "rollup.config.js"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "suppressImplicitAnyIndexErrors": true,
+
+    "noImplicitAny": false
+  }
+}

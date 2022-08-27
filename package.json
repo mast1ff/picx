@@ -1,0 +1,48 @@
+{
+  "name": "picx-project",
+  "version": "0.0.0",
+  "description": "A template engine that can be written in pure HTML.",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "turbo run clean",
+    "watch": "turbo run watch",
+    "build": "turbo run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@rollup/plugin-typescript": "^8.4.0",
+    "@tknf/eslint-config-typescript": "^1.0.8",
+    "@tknf/prettier-config": "^1.0.8",
+    "eslint": "^8.22.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.78.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "tslib": "^2.4.0",
+    "turbo": "^1.4.3",
+    "typescript": "^4.8.2"
+  },
+  "prettier": "@tknf/prettier-config",
+  "eslintConfig": {
+    "extends": "@tknf/eslint-config-typescript",
+    "rules": {
+      "dot-notation": "off",
+      "no-console": "off",
+      "no-constant-condition": "off",
+      "no-param-reassign": "off",
+      "no-plusplus": "off",
+      "no-prototype-builtins": "off",
+      "no-undef": "off",
+      "require-yield": "off",
+      "import/no-named-as-default": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/explicit-member-accessibility": "off",
+      "@typescript-eslint/no-non-null-assertion": "off"
+    }
+  }
+}

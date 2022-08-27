@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>picx for the browser</title>
+  <script src="./node_modules/picx/dist/index.browser.min.js"></script>
+</head>
+
+<body>
+  <script>
+    var Picx = window.picx.Picx;
+    var engine = new Picx({
+      extname: '.html',
+      cache: true
+    });
+    var src = "<h2>Welcome to {{ name | capitalize}},&nbsp;<!-- INCLUDE 'date' --></h2>";
+    console.log(engine.options)
+    var ctx = {
+      name: 'Picx',
+      date: new Date()
+    };
+    engine.parseAndRender(src, ctx)
+      .then(function(html) {
+        document.body.innerHTML = html
+      });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "@picx/express",
+  "version": "0.1.0",
+  "description": "Express middleware for Picx template engine",
+  "author": "mast1ff <https://github.com/mast1ff>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mast1ff/picx",
+    "directory": "packages/express"
+  },
+  "bugs": {
+    "url": "https://github.com/mast1ff/picx/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "homepage": "https://github.com/mast1ff/picx/tree/main/#readme",
+  "license": "MIT",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./index.js",
+    "./index.d.ts"
+  ],
+  "scripts": {
+    "clean": "rimraf index.js index.d.ts",
+    "watch": "rollup -c -w",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "picx": "^0.1.0",
+    "@types/node": "^18.7.13"
+  }
+}

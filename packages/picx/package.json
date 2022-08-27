@@ -1,0 +1,41 @@
+{
+  "name": "picx",
+  "version": "0.1.0",
+  "description": "A template engine that can be written in pure HTML",
+  "author": "mast1ff <https://github.com/mast1ff>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mast1ff/picx",
+    "directory": "packages/picx"
+  },
+  "bugs": {
+    "url": "https://github.com/mast1ff/picx/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "homepage": "https://github.com/mast1ff/picx/tree/main/#readme",
+  "license": "MIT",
+  "main": "./dist/index.node.cjs.js",
+  "module": "./dist/index.node.esm.js",
+  "es2015": "./dist/index.browser.esm.js",
+  "browser": {
+    "./dist/index.node.cjs.js": "./dist/index.browser.umd.js",
+    "./dist/index.node.esm.js": "./dist/index.browser.esm.js"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "watch": "rollup -c -w",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^18.7.13"
+  }
+}
