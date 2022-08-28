@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="picx" tests="73" failures="0" errors="0" time="3.052">
+  <testsuite name="test/emitters/streamed-emitter-browser.test.ts" errors="0" failures="0" skipped="0" timestamp="2022-08-28T10:28:21" time="2.009" tests="1">
+    <testcase classname="Emitters:StreamedEmitter (browser)" name="should throw when try to constructing" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="test/cache/lru.test.ts" errors="0" failures="0" skipped="0" timestamp="2022-08-28T10:28:21" time="2.294" tests="6">
+    <testcase classname="Cache:LRU" name="should perform read, write" time="0.002">
+    </testcase>
+    <testcase classname="Cache:LRU" name="hould perform clear" time="0">
+    </testcase>
+    <testcase classname="Cache:LRU" name="should remove lrc item when full (limit: -1)" time="0.004">
+    </testcase>
+    <testcase classname="Cache:LRU" name="should remove lrc item when full (limit: 1)" time="0.002">
+    </testcase>
+    <testcase classname="Cache:LRU" name="should remove lrc item when full (limit: 2)" time="0.001">
+    </testcase>
+    <testcase classname="Cache:LRU" name="should overwrite item the with same key" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="test/fs/loader.test.ts" errors="0" failures="0" skipped="0" timestamp="2022-08-28T10:28:21" time="2.319" tests="4">
+    <testcase classname="Fs:loader candidates()" name="should resolve relatively" time="0.001">
+    </testcase>
+    <testcase classname="Fs:loader candidates()" name="should not include out of root candidates" time="0">
+    </testcase>
+    <testcase classname="Fs:loader candidates()" name="should treat root as a terminated path" time="0">
+    </testcase>
+    <testcase classname="Fs:loader candidates()" name="should default `.contains()` to () =&gt; true" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="test/fs/node.test.ts" errors="0" failures="0" skipped="0" timestamp="2022-08-28T10:28:21" time="2.403" tests="10">
+    <testcase classname="Fs:node resolve()" name="should resolve based on root" time="0.001">
+    </testcase>
+    <testcase classname="Fs:node resolve()" name="should add extension if it has no extension" time="0.001">
+    </testcase>
+    <testcase classname="Fs:node existsSync()" name="should resolve as false if not exists" time="0">
+    </testcase>
+    <testcase classname="Fs:node existsSync()" name="should resolve as true if exists" time="0.005">
+    </testcase>
+    <testcase classname="Fs:node exists()" name="should resolve as false if not exists" time="0.001">
+    </testcase>
+    <testcase classname="Fs:node exists()" name="should resolve as true if exists" time="0">
+    </testcase>
+    <testcase classname="Fs:node readFileSync()" name="should throw when not exist" time="0.005">
+    </testcase>
+    <testcase classname="Fs:node readFileSync()" name="should read content if exists" time="0">
+    </testcase>
+    <testcase classname="Fs:node readFile()" name="should throw when not exist" time="0">
+    </testcase>
+    <testcase classname="Fs:node readFile()" name="should read content if exists" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="test/context/context.test.ts" errors="0" failures="0" skipped="0" timestamp="2022-08-28T10:28:21" time="2.405" tests="35">
+    <testcase classname="Context:context get()" name="should get direct property" time="0.001">
+    </testcase>
+    <testcase classname="Context:context get()" name="should read nested property" time="0.001">
+    </testcase>
+    <testcase classname="Context:context get()" name="undefined property should yield undefined" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should respect to toPicx" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should undefined when not exist" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should string length as size" time="0.001">
+    </testcase>
+    <testcase classname="Context:context get()" name="should array length as size" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should map size as size" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should undefined if not have a size" time="0.001">
+    </testcase>
+    <testcase classname="Context:context get()" name="should read .first of array" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should read .last of array" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should read element of array" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should read element of array from end" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should call function" time="0">
+    </testcase>
+    <testcase classname="Context:context get()" name="should call function before read nested property" time="0">
+    </testcase>
+    <testcase classname="Context:context getFromScope()" name="should support string" time="0.001">
+    </testcase>
+    <testcase classname="Context:context strictVariables" name="should throw when variable not defined" time="0.008">
+    </testcase>
+    <testcase classname="Context:context strictVariables" name="should throw when deep variable not exist" time="0">
+    </testcase>
+    <testcase classname="Context:context strictVariables" name="should throw when itself not defined" time="0.001">
+    </testcase>
+    <testcase classname="Context:context strictVariables" name="should find variable in parent scope" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should undefined for prototype object property" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should undefined for Array.prototype.reduce" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should undefined for function prototype property" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should allow function constructor properties" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should undefined for class method" time="0.001">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should allow class property" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should allow Array.prototype.length" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should allow size to access Array.prototype.length" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should allow size to access Set.prototype.size" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should allow size to access Object key count" time="0">
+    </testcase>
+    <testcase classname="Context:context ownPropertyOnly" name="should throw when property is hidden and strictVariables is true" time="0.001">
+    </testcase>
+    <testcase classname="Context:context .getAll()" name="should get all properties when arguments empty" time="0">
+    </testcase>
+    <testcase classname="Context:context .push()" name="should push scope" time="0">
+    </testcase>
+    <testcase classname="Context:context .push()" name="should hide deep properties by push" time="0">
+    </testcase>
+    <testcase classname="Context:context .pop()" name="should pop scope" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="test/fs/browser.test.ts" errors="0" failures="0" skipped="0" timestamp="2022-08-28T10:28:21" time="2.81" tests="17">
+    <testcase classname="Fs:browser resolve()" name="should support relative root" time="0.03">
+    </testcase>
+    <testcase classname="Fs:browser resolve()" name="should treat root as directory" time="0.006">
+    </testcase>
+    <testcase classname="Fs:browser resolve()" name="should support absolute root" time="0.004">
+    </testcase>
+    <testcase classname="Fs:browser resolve()" name="should support empty root" time="0.004">
+    </testcase>
+    <testcase classname="Fs:browser resolve()" name="should support full url as root" time="0.005">
+    </testcase>
+    <testcase classname="Fs:browser resolve()" name="should add extname when absent" time="0.004">
+    </testcase>
+    <testcase classname="Fs:browser resolve()" name="should add extname for urls have searchParams" time="0.004">
+    </testcase>
+    <testcase classname="Fs:browser resolve()" name="should not add extname when full url is given" time="0.007">
+    </testcase>
+    <testcase classname="Fs:browser resolve()" name="should not add extname when already have one" time="0.01">
+    </testcase>
+    <testcase classname="Fs:browser dirname()" name="should return dirname of file" time="0.006">
+    </testcase>
+    <testcase classname="Fs:browser exists()" name="should always return true" time="0.003">
+    </testcase>
+    <testcase classname="Fs:browser existsSync()" name="should always return true" time="0.003">
+    </testcase>
+    <testcase classname="Fs:browser readFile()" name="should get corresponding text" time="0.017">
+    </testcase>
+    <testcase classname="Fs:browser readFile()" name="should throw 404" time="0.019">
+    </testcase>
+    <testcase classname="Fs:browser readFile()" name="should throw error" time="0.007">
+    </testcase>
+    <testcase classname="Fs:browser readFileSync()" name="should get corresponding text" time="0.003">
+    </testcase>
+    <testcase classname="Fs:browser readFileSync()" name="should throw 404" time="0.005">
+    </testcase>
+  </testsuite>
+</testsuites>

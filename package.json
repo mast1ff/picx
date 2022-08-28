@@ -10,6 +10,8 @@
     "clean": "turbo run clean",
     "watch": "turbo run watch",
     "build": "turbo run build",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "pkg:version": "node ./scripts/version.js",
     "pkg:publish": "node ./scripts/publish.js"
   },

@@ -1,7 +1,7 @@
 import { sep, resolve as nodeResolve, extname, dirname as nodeDirname } from "path";
 import { stat, statSync, readFile as nodeReadFile, readFileSync as nodeReadFileSync } from "fs";
 import * as _ from "../util/underscore";
-import { requireResolve } from "./node-require";
+// import { requireResolve } from "./node-require";
 
 const statAsync = _.promisify(stat);
 const readFileAsync = _.promisify<string, string, string>(nodeReadFile as any);
@@ -32,6 +32,8 @@ export function resolve(root: string, file: string, ext: string) {
   if (!extname(file)) file += ext;
   return nodeResolve(root, file);
 }
+
+/*
 export function fallback(file: string) {
   try {
     return requireResolve(file);
@@ -39,6 +41,7 @@ export function fallback(file: string) {
     //
   }
 }
+*/
 export function dirname(filepath: string) {
   return nodeDirname(filepath);
 }
