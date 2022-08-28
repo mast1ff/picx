@@ -26,6 +26,6 @@ jobs:
         with:
           version: 7
       - run: |
-          npm install --audit=false --fund=false
-          npm run build
-          npm test
+          pnpm install
+          pnpm build
+          pnpm test
